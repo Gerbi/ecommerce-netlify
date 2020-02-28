@@ -8,6 +8,7 @@
         <div class="col-span-3">
           <h1 class="text-3xl font-semibold leading-normal text-gray-800">{{ product.name }}</h1>
           <star-rating
+                  class="flex"
                   :rating="product.starrating"
                   :star-size="15"
                   :show-rating="false"
@@ -38,6 +39,7 @@
         <h2 class="text-lg font-normal">Reviews</h2>
         <!-- maybe an image of a person? -->
         <star-rating
+                class="flex"
                 :rating="product.starrating"
                 active-color="#daa520"
                 :star-size="15"
