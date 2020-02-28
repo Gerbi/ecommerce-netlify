@@ -4,7 +4,7 @@
       <h3>Please enter your payment details:</h3>
       <label for="email">Email</label>
       <br />
-      <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
+      <input class="bg-white border rounded-md mt-2 mb-4 py-2 px-4" id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
       <br />
       <label for="card">Credit Card</label>
       <br />
@@ -21,7 +21,7 @@
         @change="complete = $event.complete"
       />
       <button
-        class="pay-with-stripe button"
+        class="inline-flex my-4 items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
         @click="pay"
         :disabled="!complete || !stripeEmail"
       >Pay with credit card</button>
@@ -81,7 +81,7 @@ export default {
 };
 </script> 
  
-<style lang="scss" scoped>
+<style lang="css" scoped>
 input,
 button {
   width: 100%;

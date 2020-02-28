@@ -8,8 +8,8 @@
     <div class="new">
       <slot name="new">New</slot>
     </div>
-    <div class="sale">
-      <slot name="sale">Men Shoes</slot>
+    <div class="sale text-indigo-600">
+      <slot name="sale text-indigo-600">Men Shoes</slot>
     </div>
     <div class="collection">
       <slot name="collection">Collection</slot>
@@ -24,13 +24,15 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .textlockup {
   display: grid;
   grid-template-columns: 50px 100px 1fr;
   grid-template-rows: 50px 50px 100px 20px 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  align-items: center;
+}
   .new {
     grid-area: 1 / 1 / 5 / 4;
     font-size: 23vmin;
@@ -40,7 +42,6 @@ export default {};
   .sale {
     grid-area: 2 / 2 / 3 / 4;
     font-size: 6.5vmin;
-    color: #d96528;
     font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, "Helvetica Neue", Arial, sans-serif;
   }
@@ -59,11 +60,11 @@ export default {};
   .img {
     max-width: 950px;
     grid-area: 1 / 3 / 6 / 4;
+  }
     img {
       width: 95%;
     }
-  }
-}
+
 
 @media screen and (max-width: 650px) {
   .textlockup {

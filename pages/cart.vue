@@ -2,7 +2,7 @@
   <div>
     <app-cart-steps />
     <hr />
-    <h1 class="center">Your Cart</h1>
+    <h1 class="text-3xl text-center my-6 font-semibold leading-tight">Your Cart</h1>
 
     <section v-if="cartUIStatus === 'idle'">
       <app-cart-display />
@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .loader {
   display: flex;
   justify-content: center;

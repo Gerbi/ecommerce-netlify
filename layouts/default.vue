@@ -1,7 +1,14 @@
 <template>
-  <div>
+  <div class="ms overflow-x-hidden bg-white">
+    <div class="fixed top-0 left-0 z-50 px-2 font-mono text-white bg-indigo-500 shadow-md">
+      <span class="sm:hidden">df</span>
+      <span class="hidden sm:inline md:hidden">sm</span>
+      <span class="hidden md:inline lg:hidden">md</span>
+      <span class="hidden lg:inline xl:hidden">lg</span>
+      <span class="hidden xl:inline">xl</span>
+    </div>
     <app-nav />
-    <main>
+    <main class="container px-4 pt-4 mx-auto">
       <nuxt />
     </main>
     <app-footer />
@@ -21,39 +28,8 @@ export default {
 </script>
 
 <style scoped>
-body {
+.ms {
   border: 10px solid #ccc;
   min-height: 100vh;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-main {
-  padding: 0;
-  width: 95vw;
-  margin-left: 2vw;
-}
-
-@media screen and (min-width: 1000px) {
-  main {
-    padding: 40px;
-    width: 80vw;
-    margin-left: 7vw;
-  }
 }
 </style>

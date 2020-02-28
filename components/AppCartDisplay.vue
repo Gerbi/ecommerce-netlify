@@ -3,10 +3,10 @@
     <section v-if="cartCount > 0">
       <table>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
+          <th class="px-6 py-3 border-b border-gray-200 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Product</th>
+          <th class="px-6 py-3 border-b border-gray-200 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Price</th>
+          <th class="px-6 py-3 border-b border-gray-200 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+          <th class="px-6 py-3 border-b border-gray-200 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Total</th>
         </tr>
         <tr v-for="item in cart" :key="item.id">
           <td>
@@ -31,22 +31,22 @@
               <strong>Subtotal:</strong>
             </p>
             <p>Shipping:</p>
-            <p class="golden">Total:</p>
+            <p class="golden bg-indigo-100 text-indigo-700">Total:</p>
           </div>
           <div class="num">
             <p>
               <strong>{{ cartTotal | dollar }}</strong>
             </p>
             <p>Free Shipping</p>
-            <p class="golden">{{ cartTotal | dollar }}</p>
+            <p class="golden bg-indigo-100 text-indigo-700">{{ cartTotal | dollar }}</p>
           </div>
         </div>
       </section>
     </section>
 
-    <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
-      <button class="pay-with-stripe">
+    <section v-else class="text-center">
+      <p class="mb-3 text-gray-700">Your cart is empty, fill it up!</p>
+      <button class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
         <nuxt-link exact to="/">Back Home</nuxt-link>
       </button>
     </section>
@@ -69,7 +69,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .productimg {
   float: left;
   margin-right: 15px;
@@ -101,7 +101,6 @@ th {
 }
 
 .golden {
-  background: #f2eee2;
   font-weight: bold;
   padding: 10px;
 }
